@@ -1,0 +1,14 @@
+<html>
+<head>
+<title>Cloud Cybersecurity Risk Monitor</title>
+</head>
+
+<body>
+<h1>Cloud Security Threat Monitor</h1>
+
+<p id="report">
+Loading latest report...
+</p>
+
+</body>
+</html>
