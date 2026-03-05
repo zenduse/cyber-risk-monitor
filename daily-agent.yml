@@ -1,0 +1,24 @@
+name: Daily Cyber Risk Monitor
+
+on:
+  schedule:
+    - cron: '0 4 * * *'
+
+jobs:
+  update-report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Generate report
+        run: |
+          echo "Top Cloud Risk Today: Identity token theft" > report.txt
+
+      - name: Commit report
+        run: |
+          git config --global user.name "agent"
+          git config --global user.email "agent@github.com"
+          git add .
+          git commit -m "daily cyber update"
+          git push
